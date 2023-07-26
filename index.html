@@ -5,39 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  
+
 </head>
 <body>
+  <div class="result">
+    <p> Your Result </p>
+    
+    <div class="circle-container">
+      <p class="circle-text">76 of 100</p>
+    </div>
 
-  Your Result
-  76
-  of 100
+    <p> Great </p>
+    <p> You scored higher than 65% of the people who have taken these tests. </p>
+  </div>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+  <div class="summary">
+    <span>Summary</span> 
 
-  Reaction
-  80 / 100
+    <ul>
+      <li class="reaction">
+        <img class="icon" src="assets/images/icon-reaction.svg">
+        <span class="item">Reaction</span>
+        <span class="score">80 / 100</span>
+      </li>
+      <li class="memory">
+        <img class="icon" src="assets/images/icon-memory.svg">
+        <span class="item">Memory</span>
+        <span class="score">92 / 100</span>
+      </li>
+      <li class="verbal">
+        <img class="icon" src="assets/images/icon-verbal.svg">
+        <span class="item">Verbal</span>
+        <span class="score">61 / 100</span>
+      </li>
+      <li class="visual">
+        <img class="icon" src="assets/images/icon-visual.svg">
+        <span class="item">Visual</span>
+        <span class="score">72 / 100</span>
+      </li>
+    </ul>
 
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
+    <button>Continue</button>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

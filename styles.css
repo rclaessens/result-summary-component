@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('fonts/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    background-color: white;
+    font-family: 'HankenGrotesk', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'HankenGrotesk', sans-serif;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: 'HankenGrotesk', sans-serif;
+    font-weight: 700;
+}
+
+.result{
+    height: 100%;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    text-align: center;
+}
+
+.summary{
+    height: 100%;
+    color: hsl(224, 30%, 27%);
+    font-family: 'HankenGrotesk', sans-serif;
+    font-weight: 700;
+}
+
+.circle-container {
+    display: inline-block;
+    width: 100px; /* Customize the width and height to make the circle */
+    height: 100px; /* It will be responsive to the font size */
+
+    border-radius: 50%; /* Make it a circle */
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0)); /* Customize the circle's background color */
+}
