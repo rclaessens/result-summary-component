@@ -1,64 +1,193 @@
-@font-face {
-    font-family: 'HankenGrotesk';
-    src: url('fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'HankenGrotesk';
-    src: url('fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'HankenGrotesk';
-    src: url('fonts/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 body {
-    background-color: white;
-    font-family: 'HankenGrotesk', sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* On mobile, the divs are stacked vertically */
+    align-items: center; /* Center the divs horizontally on mobile */
 }
 
 h1 {
-    font-family: 'HankenGrotesk', sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 800;
+    font-size: 1.2em;
 }
 
 h2 {
-    font-family: 'HankenGrotesk', sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 700;
 }
 
 .result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
-    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: auto;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    color: white;
+    color:hsl(241, 100%, 89%);
     text-align: center;
+    padding: 6%;
 }
 
-.summary{
-    height: 100%;
-    color: hsl(224, 30%, 27%);
-    font-family: 'HankenGrotesk', sans-serif;
+#your_result {
+    font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 700;
+    font-size: 1.2em;
 }
 
 .circle-container {
     display: inline-block;
-    width: 100px; /* Customize the width and height to make the circle */
-    height: 100px; /* It will be responsive to the font size */
+    width: 175px;
+    height: 175px;
+    line-height: 175px;
+    border-radius: 50%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    margin: 6%;
+}
 
-    border-radius: 50%; /* Make it a circle */
-    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0)); /* Customize the circle's background color */
+.circle-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#septsix {
+    font-size: 62px;
+    color: white;
+}
+
+#great {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: white;
+}
+
+.sentence {
+    max-width: 75%;
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+.summary{
+    height: 100%;
+    width: 90%;
+    color: hsl(224, 30%, 27%);
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    padding: 5% 5% 0% 5%;
+}
+
+ul {
+    margin-top: 5%;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    margin-bottom: 2%;
+    border-radius: 15px;
+}
+
+li .item {
+    flex: 1;
+}
+
+li img {
+    margin-right: 5%;
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.2);
+}
+
+.reaction .item {
+    color: hsl(0, 100%, 67%);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.2);
+}
+
+.memory .item {
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.2);
+}
+
+.verbal .item {
+    color: hsl(166, 100%, 37%);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.2);
+}
+
+.visual .item {
+    color: hsl(234, 85%, 45%);
+}
+
+.score{
+    font-weight: 500;
+}
+
+button {
+    margin: 5% 0%;
+    padding: 5% 0%;
+    width: 100%;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 200px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media screen and (min-width: 768px) {
+    .main-container {
+      flex-direction: row; /* On desktop, the divs are placed next to each other */
+      justify-content: center; /* Center the divs horizontally on desktop */
+      align-items: center;
+      /*margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 25%;
+      margin-right: 25%;*/
+      margin: 20%;
+    }
+
+    .result{
+        width: 50%;
+        border-radius: 50px;
+    }
+
+    .summary{
+        width: 50%;
+    }
 }
